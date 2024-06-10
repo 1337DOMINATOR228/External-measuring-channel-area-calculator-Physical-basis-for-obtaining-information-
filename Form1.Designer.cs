@@ -61,37 +61,24 @@
             button1.BackColor = Color.SeaGreen;
             button1.FlatAppearance.BorderColor = Color.Black;
             button1.FlatAppearance.BorderSize = 10;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            resources.ApplyResources(button1, "button1");
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(12, 146);
             button1.Name = "button1";
-            button1.Size = new Size(438, 75);
-            button1.TabIndex = 1;
-            button1.Text = "Рассчитать шаги";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // tbSideA
             // 
             tbSideA.BackColor = Color.Ivory;
-            tbSideA.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(tbSideA, "tbSideA");
             tbSideA.ForeColor = SystemColors.MenuText;
-            tbSideA.Location = new Point(6, 24);
             tbSideA.Name = "tbSideA";
-            tbSideA.PlaceholderText = "Сторона A (См)";
-            tbSideA.Size = new Size(330, 29);
-            tbSideA.TabIndex = 2;
             // 
             // tbSideB
             // 
             tbSideB.BackColor = Color.Ivory;
-            tbSideB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            tbSideB.Location = new Point(6, 59);
+            resources.ApplyResources(tbSideB, "tbSideB");
             tbSideB.Name = "tbSideB";
-            tbSideB.PlaceholderText = "Сторона B (См)";
-            tbSideB.Size = new Size(330, 29);
-            tbSideB.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -100,23 +87,15 @@
             groupBox1.Controls.Add(tbSideA);
             groupBox1.Controls.Add(tbSideB);
             groupBox1.FlatStyle = FlatStyle.Popup;
-            groupBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            resources.ApplyResources(groupBox1, "groupBox1");
             groupBox1.ForeColor = SystemColors.ControlText;
-            groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(438, 93);
-            groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Стороны прямоугольника:";
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(342, 26);
+            resources.ApplyResources(button2, "button2");
             button2.Name = "button2";
-            button2.Size = new Size(81, 61);
-            button2.TabIndex = 4;
-            button2.Text = "/\\\r\n |\r\n\\/";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -124,12 +103,8 @@
             // 
             tbRadius.BackColor = Color.Ivory;
             tbRadius.BorderStyle = BorderStyle.FixedSingle;
-            tbRadius.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            tbRadius.Location = new Point(12, 111);
+            resources.ApplyResources(tbRadius, "tbRadius");
             tbRadius.Name = "tbRadius";
-            tbRadius.PlaceholderText = "Радиус окружности (См)";
-            tbRadius.Size = new Size(438, 29);
-            tbRadius.TabIndex = 5;
             // 
             // OutputTable
             // 
@@ -138,144 +113,105 @@
             OutputTable.BackgroundColor = Color.ForestGreen;
             OutputTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             OutputTable.Columns.AddRange(new DataGridViewColumn[] { BtnPlot, Shag, ShagSideA, ShagSideB });
-            OutputTable.Location = new Point(12, 309);
+            resources.ApplyResources(OutputTable, "OutputTable");
             OutputTable.Name = "OutputTable";
             OutputTable.ReadOnly = true;
             OutputTable.RowTemplate.Height = 25;
-            OutputTable.Size = new Size(438, 273);
-            OutputTable.TabIndex = 9;
             OutputTable.CellClick += OutputTable_CellClick;
             // 
             // BtnPlot
             // 
-            BtnPlot.HeaderText = "Рассчитать график";
+            resources.ApplyResources(BtnPlot, "BtnPlot");
             BtnPlot.Name = "BtnPlot";
             BtnPlot.ReadOnly = true;
             // 
             // Shag
             // 
-            Shag.HeaderText = "Шаг";
+            resources.ApplyResources(Shag, "Shag");
             Shag.Name = "Shag";
             Shag.ReadOnly = true;
             // 
             // ShagSideA
             // 
-            ShagSideA.HeaderText = "Шагов со стороны А";
+            resources.ApplyResources(ShagSideA, "ShagSideA");
             ShagSideA.Name = "ShagSideA";
             ShagSideA.ReadOnly = true;
             // 
             // ShagSideB
             // 
-            ShagSideB.HeaderText = "Шагов стороны B";
+            resources.ApplyResources(ShagSideB, "ShagSideB");
             ShagSideB.Name = "ShagSideB";
             ShagSideB.ReadOnly = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            resources.ApplyResources(label1, "label1");
             label1.BackColor = Color.Ivory;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(117, 281);
             label1.Name = "label1";
-            label1.Size = new Size(213, 25);
-            label1.TabIndex = 10;
-            label1.Text = "Ваши возможные шаги";
             // 
             // btnSave
             // 
-            btnSave.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSave.Location = new Point(1107, 586);
+            resources.ApplyResources(btnSave, "btnSave");
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(159, 82);
-            btnSave.TabIndex = 2;
-            btnSave.Text = "Сохранить график";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
             // pbSideA
             // 
             pbSideA.BackColor = SystemColors.ButtonHighlight;
-            pbSideA.Location = new Point(611, 40);
+            resources.ApplyResources(pbSideA, "pbSideA");
             pbSideA.Name = "pbSideA";
-            pbSideA.Size = new Size(1203, 540);
-            pbSideA.TabIndex = 12;
             pbSideA.TabStop = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
+            resources.ApplyResources(label2, "label2");
             label2.BackColor = Color.Ivory;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(1107, 12);
             label2.Name = "label2";
-            label2.Size = new Size(124, 25);
-            label2.TabIndex = 13;
-            label2.Text = "Ваш ГРАФИК";
             // 
             // dgFoundS
             // 
             dgFoundS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgFoundS.Columns.AddRange(new DataGridViewColumn[] { dgS });
-            dgFoundS.Location = new Point(456, 12);
+            resources.ApplyResources(dgFoundS, "dgFoundS");
             dgFoundS.Name = "dgFoundS";
             dgFoundS.RowTemplate.Height = 25;
-            dgFoundS.Size = new Size(149, 644);
-            dgFoundS.TabIndex = 14;
             // 
             // dgS
             // 
-            dgS.HeaderText = "Площади";
+            resources.ApplyResources(dgS, "dgS");
             dgS.Name = "dgS";
             // 
             // tbTochonst
             // 
             tbTochonst.BackColor = Color.Ivory;
             tbTochonst.BorderStyle = BorderStyle.FixedSingle;
-            tbTochonst.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            tbTochonst.Location = new Point(275, 242);
-            tbTochonst.Multiline = true;
+            resources.ApplyResources(tbTochonst, "tbTochonst");
             tbTochonst.Name = "tbTochonst";
-            tbTochonst.PlaceholderText = "Точность";
-            tbTochonst.Size = new Size(175, 25);
-            tbTochonst.TabIndex = 15;
-            tbTochonst.Text = "10000000";
             // 
             // label3
             // 
-            label3.AutoSize = true;
+            resources.ApplyResources(label3, "label3");
             label3.BackColor = Color.Ivory;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(12, 242);
             label3.Name = "label3";
-            label3.Size = new Size(257, 25);
-            label3.TabIndex = 16;
-            label3.Text = "Кол-во генерируемых точек";
             // 
             // label4
             // 
-            label4.AutoSize = true;
+            resources.ApplyResources(label4, "label4");
             label4.BackColor = Color.Ivory;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(129, 586);
             label4.Name = "label4";
-            label4.Size = new Size(236, 25);
-            label4.TabIndex = 17;
-            label4.Text = "Прогресс печати графика";
             // 
             // progressBar1
             // 
             progressBar1.BackColor = Color.Fuchsia;
-            progressBar1.Location = new Point(2, 624);
+            resources.ApplyResources(progressBar1, "progressBar1");
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(448, 44);
-            progressBar1.TabIndex = 18;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGreen;
-            ClientSize = new Size(1826, 680);
             Controls.Add(progressBar1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -289,9 +225,7 @@
             Controls.Add(tbRadius);
             Controls.Add(groupBox1);
             Controls.Add(button1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Радар шагов";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
